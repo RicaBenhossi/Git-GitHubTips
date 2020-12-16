@@ -184,3 +184,28 @@ You can create a tag, a mark on the history of your project for a version releas
     >This commnand lists all the tags you have.
   - **git checkout tag_name**
     >You can also checkout your project to a specific tag. Use this command to do it.
+
+### Problem Solving
+
+- **Wrong commit message**
+Sometimes, when you are working focused and committed, your commit messages could contains typo mistakes or messages that is not so clear or related to what you did in the code.
+It, can happen... ¯\\\_(ツ)_/¯
+When these kind of mistakes happens, it is recommended to fix your commit message. You can do it in 2 ways:
+
+  - **git commit <u>amend</u> -m 'correct_messege'** (fixing last commit message)
+  With the **amend** option you can replace the wrong commit message you wright on the laste comit to another message. This fix is more direct and fast. So, if you find out you commited some code with a wrong message, fix it right now.
+  With amend option the previous wrong commit will no longer exist.
+  **Avoid amending commits that already have been pushed**. It can be forced, but can cause issues to people who based branches on this commit.
+
+  - **git rebase --interactive HEAD~N** (fixing an older or multiple commits)
+  This method will basically rebase your branch based on it self.
+  When you use the command --interactive with HEAD~N (where "N" is the number of commits you want to "regress"), it shows you a list of all the commits in this range and it allows you to choose what to do with every commit in this list.
+  To edit the commit message, just change **PICK** in the start of the line to **REWORD** or just "**r**" and save your changes.
+  ![git rebase --interactive HEAD~8](/assets/Fix_wrong_commit_message-Git_reabse_--interactve.png "List of last 8 commits to edit commit message")
+  After that, git will open an editor for each commit marked as REWORD for you to edit. Make the changes you need/want and save it.
+  ![editor with commit message](/assets/Editing_commit_message_marked_as_reword.png "Editor where you can change the commit message.")
+  Now you just need to push your changes.
+  **TIP**: if you use Visual Studio Code, the extension Git Lens can make this process easier and visual. Just need to add code-insiders --wait or code --wait to the CORE of your .gitconfig file.
+  ![git config file](/assets/git_config_file.png "Git config file")
+  Now, when you need to fix some old commit messages, just do as the previous rebase command, but now, instead of doing the changes through the teminal, you can do it in a more visually way inside the Visual Studio Code
+  ![git lens interactive rebase](/assets/Git_lens_VSCode_interactive_rebase.png "Git Lens interactive rebase inside Visual Studio Code.")
