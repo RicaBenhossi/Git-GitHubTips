@@ -23,8 +23,7 @@ You can literally see how git works using https://git-school.github.io/visualizi
 Git allows you to create branches to split the work you've to do. Usualy the main branch, that will contains all the consolidated changes is MASTER.
 When you create a branch, git will create another line, as the follow exemple:
 ```
-master
-(HEAD)
+master (HEAD)
    |──── branch01
              |──── branch01.1
    |──── branch02
