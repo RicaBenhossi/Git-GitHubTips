@@ -49,6 +49,7 @@ When the feature developed on feature01 is done, you join it on branch master us
     - Commit it when you add a small new feature, or when a small part of a big new feture is done.
     - When our code is in a state that you would like to remember.
     - **You should not commit code that doesn't work**. Altought is not recommended to olnly commit in the endo of a feature/bug fix.
+  - If you commited
 
 ### General Commands
 
@@ -209,3 +210,4 @@ When these kind of mistakes happens, it is recommended to fix your commit messag
   ![git config file](/assets/git_config_file.png "Git config file")
   Now, when you need to fix some old commit messages, just do as the previous rebase command, but now, instead of doing the changes through the teminal, you can do it in a more visually way inside the Visual Studio Code
   ![git lens interactive rebase](/assets/Git_lens_VSCode_interactive_rebase.png "Git Lens interactive rebase inside Visual Studio Code.")
+This tip was took from https://linuxize.com/post/change-git-commit-message/https://linuxize.com/post/change-git-commit-message/
