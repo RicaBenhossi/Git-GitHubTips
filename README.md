@@ -183,6 +183,12 @@ You can create a tag, a mark on the history of your project for a version releas
   - **git checkout tag_name**
     > You can also checkout your project to a specific tag. Use this command to do it.
 
+- Checking/Changing the remote address
+  - **git remote get-url origin**
+    > This command will show you the current address of your remote repo.
+  - **git remote set-url origin url_address**
+    > With this command you change the address your remote repo origin is pointing to.
+
 ### Problem Solving
 
 - **Wrong commit message**
