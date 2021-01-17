@@ -196,7 +196,7 @@ Sometimes, when you are working focused and committed, your commit messages coul
 It, can happen... ¯\\\_(ツ)_/¯
 When these kind of mistakes happens, it is recommended to fix your commit message. You can do it in 2 ways:
 
-  - **git commit <u> amend</u> -m 'correct_messege'** (fixing last commit message)
+  - **git commit <u> --amend</u> -m 'correct_messege'** (fixing last commit message)
     > With the **amend** option you can replace the wrong commit message you wright on the laste comit to another message. This fix is more direct and fast. So, if you find out you commited some code with a wrong message, fix it right now.
     > With amend option the previous wrong commit will no longer exist.
   **Avoid amending commits that already have been pushed**. It can be forced, but can cause issues to people who based branches on this commit.
